@@ -44,7 +44,7 @@ window.addEventListener('scroll',shadowHeader);
 
 /*=============== HOME SWIPER ===============*/
 
-const swiper = new Swiper(".home__swiper", {
+const swiperHome = new Swiper(".home__swiper", {
   // Optional parameters
 
   loop: true,
@@ -63,7 +63,25 @@ const swiper = new Swiper(".home__swiper", {
   },
 });
 /*=============== FEATURED SWIPER ===============*/
-
+const swiperFeatured = new Swiper(".featured__swiper", {
+    // Optional parameters
+  
+    loop: true,
+    spaceBetween: 16,
+    grabCursor: true,
+    slidesPerView: "auto",
+    centeredSlides: "auto",
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    breakpoints: {
+      1150: {
+        spaceBetween: 4,
+        centeredSlides:false,
+      },
+    },
+  });
 /*=============== NEW SWIPER ===============*/
 
 /*=============== TESTIMONIAL SWIPER ===============*/
