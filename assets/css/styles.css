@@ -220,7 +220,9 @@ img {
   color: var(--first-color);
 }
 /* Add shadow header */
-
+.shadow-header{
+  box-shadow: 0 2px 16px hsla(0, 0%, 0%,0.1);
+}
 /* Active link */
 
 /*=============== SEARCH ===============*/
@@ -359,8 +361,39 @@ img {
 
 /*=============== HOME ===============*/
 
-/* Swiper class */
+.home__swiper{
+  margin: initial;
+}
+.home__container{
+  padding-top: 2rem;
+  row-gap: 2.5rem;
+}
+.home__data{
+  text-align: center;
+}
+.home__title{
+  font-size: var(--biggest-font-size);
+  margin-bottom: 1rem;
+}
 
+.home__description{
+  margin-bottom: 2rem;
+}
+.home__images{
+  display: grid;
+}
+
+.home__article,.home__img{
+  width: 220px;
+  transition: scale .4s;
+}
+.home__article{
+  scale: .8 ;
+}
+/* Swiper class */
+.swiper-slide-active,.swiper-slide-dublicate-active{
+  scale: 1;
+}
 /*=============== BUTTON ===============*/
 
 .button{
