@@ -77,7 +77,7 @@ const swiperFeatured = new Swiper(".featured__swiper", {
   },
   breakpoints: {
     1150: {
-      spaceBetween: 4,
+      slidesPerView: 4,
       centeredSlides: false,
     },
   },
@@ -98,9 +98,60 @@ const swiperNew = new Swiper(".new__swiper", {
 });
 /*=============== TESTIMONIAL SWIPER ===============*/
 
+const swiperTestimonial = new Swiper(".testimonial__swiper", {
+  // Optional parameters
+
+  loop: true,
+  spaceBetween: 16,
+  grabCursor: true,
+  slidesPerView: "auto",
+  centeredSlides: "auto",
+
+  breakpoints: {
+    1150: {
+      slidesPerView: 3,
+      centeredSlides: false,
+    },
+  },
+});
+
 /*=============== SHOW SCROLL UP ===============*/
+const scrollUp = () => {
+  const scrollUpElement = document.getElementById("scroll-up");
+  window.scrollY >= 350
+    ? scrollUpElement.classList.add("show-scroll")
+    : scrollUpElement.classList.remove("show-scroll");
+};
+
+window.addEventListener("scroll", scrollUp);
 
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
+const sections = document.querySelectorAll("section[id]");
+
+const scrollActive = () => {
+  const scrollDown = window.scrollY;
+
+  sections.forEach((current) => {
+    const sectionHeight = current.offsetHeight;
+    const sectionTop = current.offsetTop - 50;
+    const sectionId = current.getAttribute("id");
+
+    if (scrollDown >= sectionTop && scrollDown <= sectionTop + sectionHeight) {
+      // Если текущий раздел видим, добавляем класс "active" к соответствующей ссылке
+      const navLinks = document.querySelectorAll(
+        `.nav__menu a[href="#${sectionId}"]`
+      );
+      navLinks.forEach((link) => link.classList.add("active-link"));
+    } else {
+      // Если текущий раздел не видим, удаляем класс "active" из соответствующей ссылки
+      const navLinks = document.querySelectorAll(
+        `.nav__menu a[href="#${sectionId}"]`
+      );
+      navLinks.forEach((link) => link.classList.remove("active-link"));
+    }
+  });
+};
+window.addEventListener("scroll", scrollActive);
 
 /*=============== DARK LIGHT THEME ===============*/
 
