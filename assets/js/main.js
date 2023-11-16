@@ -40,7 +40,7 @@ const shadowHeader = () => {
     : header.classList.remove("shadow-header");
 };
 
-window.addEventListener('scroll',shadowHeader);
+window.addEventListener("scroll", shadowHeader);
 
 /*=============== HOME SWIPER ===============*/
 
@@ -64,26 +64,38 @@ const swiperHome = new Swiper(".home__swiper", {
 });
 /*=============== FEATURED SWIPER ===============*/
 const swiperFeatured = new Swiper(".featured__swiper", {
-    // Optional parameters
-  
-    loop: true,
-    spaceBetween: 16,
-    grabCursor: true,
-    slidesPerView: "auto",
-    centeredSlides: "auto",
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-    breakpoints: {
-      1150: {
-        spaceBetween: 4,
-        centeredSlides:false,
-      },
-    },
-  });
-/*=============== NEW SWIPER ===============*/
+  // Optional parameters
 
+  loop: true,
+  spaceBetween: 16,
+  grabCursor: true,
+  slidesPerView: "auto",
+  centeredSlides: "auto",
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  breakpoints: {
+    1150: {
+      spaceBetween: 4,
+      centeredSlides: false,
+    },
+  },
+});
+/*=============== NEW SWIPER ===============*/
+const swiperNew = new Swiper(".new__swiper", {
+  // Optional parameters
+
+  loop: true,
+  spaceBetween: 16,
+  slidesPerView: "auto",
+
+  breakpoints: {
+    1150: {
+      slidesPerView: 3,
+    },
+  },
+});
 /*=============== TESTIMONIAL SWIPER ===============*/
 
 /*=============== SHOW SCROLL UP ===============*/

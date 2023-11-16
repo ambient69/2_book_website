@@ -220,8 +220,8 @@ img {
   color: var(--first-color);
 }
 /* Add shadow header */
-.shadow-header{
-  box-shadow: 0 2px 16px hsla(0, 0%, 0%,0.1);
+.shadow-header {
+  box-shadow: 0 2px 16px hsla(0, 0%, 0%, 0.1);
 }
 /* Active link */
 
@@ -249,19 +249,19 @@ img {
   padding-inline: 1rem;
 }
 
-.search__icon{
+.search__icon {
   font-size: 1.25rem;
   color: var(--title-color);
 }
 
-.search__input{
+.search__input {
   width: 100%;
-  padding-block: 1rem ;
+  padding-block: 1rem;
   background-color: var(--container-color);
   color: var(--text-color);
 }
 
-.search__close{
+.search__close {
   position: absolute;
   top: 2rem;
   right: 2rem;
@@ -270,11 +270,11 @@ img {
   cursor: pointer;
 }
 /* Show search */
-.show-search{
+.show-search {
   top: 0;
 }
 /*=============== LOGIN ===============*/
-.login{
+.login {
   position: fixed;
   top: -100%;
   left: 0;
@@ -286,24 +286,24 @@ img {
   align-items: center;
   padding: 1.5rem;
   text-align: center;
-  transition: top .4s;
+  transition: top 0.4s;
 }
 
-.login__form{
+.login__form {
   background-color: var(--container-color);
   padding: 2rem 1.5rem;
   border: 2px solid var(--border-color);
   row-gap: 1.25rem;
 }
 
-.login__title{
+.login__title {
   font-size: var(--h2-font-size);
 }
-.login__group{
+.login__group {
   row-gap: 1.25rem;
 }
 
-.login__label{
+.login__label {
   display: block;
   text-align: initial;
   color: var(--title-color);
@@ -311,7 +311,7 @@ img {
   margin-bottom: 0.25rem;
 }
 
-.login__input{
+.login__input {
   width: 100%;
   background-color: var(--container-color);
   border: 2px solid var(--border-color);
@@ -319,32 +319,32 @@ img {
   color: var(--text-color);
 }
 
-.login__signup,.login__forgot{
+.login__signup,
+.login__forgot {
   display: block;
   font-size: var(--small-font-size);
 }
 
-.login__signup{
-  margin-bottom: .5rem;
+.login__signup {
+  margin-bottom: 0.5rem;
 }
 
-.login__signup a{
+.login__signup a {
   color: var(--first-color);
   font-weight: var(--font-medium);
 }
 
-.login__forgot{
+.login__forgot {
   color: var(--first-color);
   margin-bottom: 1.25rem;
 }
 
-.login__button{
+.login__button {
   width: 100%;
   cursor: pointer;
-
 }
 
-.login__close{
+.login__close {
   position: absolute;
   top: 2rem;
   right: 2rem;
@@ -353,60 +353,62 @@ img {
   cursor: pointer;
 }
 
-.show-login{
-    top: 0;
+.show-login {
+  top: 0;
 }
 
 /* Show login */
 
 /*=============== HOME ===============*/
 
-.home__swiper{
+.home__swiper {
   margin: initial;
 }
-.home__container{
+.home__container {
   padding-top: 2rem;
   row-gap: 2.5rem;
 }
-.home__data{
+.home__data {
   text-align: center;
 }
-.home__title{
+.home__title {
   font-size: var(--biggest-font-size);
   margin-bottom: 1rem;
 }
 
-.home__description{
+.home__description {
   margin-bottom: 2rem;
 }
-.home__images{
+.home__images {
   display: grid;
 }
 
-.home__article,.home__img{
+.home__article,
+.home__img {
   width: 220px;
-  transition: scale .4s;
+  transition: scale 0.4s;
 }
-.home__article{
-  scale: .8 ;
+.home__article {
+  scale: 0.8;
 }
 /* Swiper class */
-.swiper-slide-active,.swiper-slide-dublicate-active{
+.swiper-slide-active,
+.swiper-slide-dublicate-active {
   scale: 1;
 }
 /*=============== BUTTON ===============*/
 
-.button{
+.button {
   display: inline-block;
   background-color: var(--first-color);
   color: var(--white-color);
   font-weight: var(--font-semi-bold);
   padding: 1rem 1.5rem;
-  transition: box-shadow .333s;
+  transition: box-shadow 0.333s;
 }
 
-.button:hover{
-  box-shadow: 0 4px 32px hsla(230,72%,32%,.4);
+.button:hover {
+  box-shadow: 0 4px 32px hsla(230, 72%, 32%, 0.4);
 }
 /*=============== SERVICES ===============*/
 
@@ -417,99 +419,163 @@ img {
 .services__card {
   text-align: center;
 }
-.services__card i{
-display: block;
-font-size: 3rem;
-color: var(--first-color);
-margin-bottom: 1rem;
+.services__card i {
+  display: block;
+  font-size: 3rem;
+  color: var(--first-color);
+  margin-bottom: 1rem;
 }
 
 .services__title {
   font-size: var(--h3-font-size);
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
 
-
-
 /*=============== FEATURED ===============*/
-.featured__card{
+.featured__card {
   position: relative;
   text-align: center;
   background-color: var(--container-color);
   padding: 2rem;
   overflow: hidden;
   border: 2px solid var(--border-color);
-  transition: border .4s, background-color .4s;
+  transition: border 0.4s, background-color 0.4s;
 }
-.featured__img{
+.featured__img {
   width: 150px;
-  margin: 0 auto .75rem;
+  margin: 0 auto 0.75rem;
 }
-.featured__title{
+.featured__title {
   font-size: var(--h2-font-size);
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
-.featured__prices{
+.featured__prices {
   display: flex;
   justify-content: center;
   align-items: center;
-  column-gap: .75rem;
+  column-gap: 0.75rem;
   column-gap: 1.25rem;
 }
-.featured__discount{
+.featured__discount {
   color: var(--title-color);
 }
-.featured__price{
+.featured__price {
   font-size: var(--small-font-size);
   text-decoration: line-through;
-
 }
 
-.featured__card .button{
+.featured__card .button {
   cursor: pointer;
 }
-.featured__actions{
+.featured__actions {
   display: inline-flex;
   flex-direction: column;
   row-gap: 0.75rem;
   position: absolute;
   top: 2rem;
   right: -1.5rem;
-  transition: right .4s;
+  transition: right 0.4s;
 }
 
-.featured__actions button{
+.featured__actions button {
   background: none;
   font-size: 1.25rem;
   color: var(--first-color);
   cursor: pointer;
 }
-.featured__card:hover .featured__actions{
-right: 1.5rem;
+.featured__card:hover .featured__actions {
+  right: 1.5rem;
 }
 /* Swiper class */
 
 .swiper-button-prev::after,
-.swiper-button-next::after{
-  content: '';
+.swiper-button-next::after {
+  content: "";
 }
 
 .swiper-button-prev,
-.swiper-button-next{
+.swiper-button-next {
   width: initial;
   height: initial;
   background-color: var(--container-color);
   border: 2px solid var(--border-color);
-  padding: .5rem;
+  padding: 0.5rem;
   font-size: 1.5rem;
   color: var(--first-color);
-  transition: border .4s, background-color .4s;
+  transition: border 0.4s, background-color 0.4s;
 }
 
 /*=============== DISCOUNT ===============*/
+.discount__container {
+  row-gap: 3.5rem;
+}
 
+.discount__data {
+  text-align: center;
+}
+.discount__title {
+  margin-bottom: 1rem;
+}
+
+.discount__description {
+  margin-bottom: 2rem;
+}
+.discount__images {
+  display: flex;
+  justify-content: center;
+}
+.discount__img-1 {
+  width: 170px;
+  transform: translateX(1rem) rotate(-10deg);
+}
+.discount__img-2 {
+  width: 170px;
+  transform: translateX(1rem) rotate(10deg);
+}
 /*=============== NEW ===============*/
+.new__card {
+  display: flex;
+  align-items: center;
+  column-gap: 2.5rem;
+  background-color: var(--container-color);
+  padding: 1.5rem 1rem;
+  color: var(--text-color);
+  border: 2px solid var(--border-color);
+  transition: border 0.4s, background-color 0.4s;
+}
+.new__card:hover {
+  border: 2px solid var(--text-color);
+}
+.new__image {
+  width: 100px;
+}
 
+.new__title {
+  font-size: var(--h2-font-size);
+  margin-bottom: 0.5rem;
+}
+
+.new__prices {
+  display: flex;
+  align-items: center;
+  column-gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+.new__discount {
+  color: var(--title-color);
+}
+
+.new__price {
+  font-size: var(--small-font-size);
+  text-decoration: line-through;
+}
+
+.new__stars {
+  color: var(--first-color);
+}
+.new__swiper:nth-child(1) {
+  margin-bottom: 2rem;
+}
 /*=============== JOIN ===============*/
 
 /*=============== TESTIMONIAL ===============*/
