@@ -154,5 +154,48 @@ const scrollActive = () => {
 window.addEventListener("scroll", scrollActive);
 
 /*=============== DARK LIGHT THEME ===============*/
+const themeButton = document.getElementById("theme-button");
+const darkTheme = "dark-theme";
+const iconTheme = "ri-sun-line";
+
+const selectedTheme = localStorage.getItem("selected-theme");
+const selectedIcon = localStorage.getItem("selected-icon");
+
+// Set theme and icon based on user's preferences from local storage or default to light theme
+document.body.classList.toggle(darkTheme, selectedTheme === "dark");
+themeButton.classList.toggle(iconTheme, selectedIcon === "ri-moon-line");
+
+// Function to toggle between dark and light themes
+const toggleTheme = () => {
+  document.body.classList.toggle(darkTheme);
+  themeButton.classList.toggle(iconTheme);
+  // Save the theme and icon preferences to local storage
+  localStorage.setItem("selected-theme", getCurrentTheme());
+  localStorage.setItem("selected-icon", getCurrentIcon());
+};
+
+// Event listener for the theme button
+themeButton.addEventListener("click", toggleTheme);
+
+// Function to get the current theme
+const getCurrentTheme = () =>
+  document.body.classList.contains(darkTheme) ? "dark" : "light";
+
+// Function to get the current icon
+const getCurrentIcon = () =>
+  document.body.classList.contains(iconTheme) ? "ri-moon-line" : "ri-sun-line";
 
 /*=============== SCROLL REVEAL ANIMATION ===============*/
+const sr = ScrollReveal({
+  origin: "top",
+  distance: "60px",
+  duration: 2500,
+  delay: 400,
+});
+
+sr.reveal(".home__data");
+sr.reveal(".join__data, .testimonial__container, .footer");
+sr.reveal(".home__images", { delay: 600 });
+sr.reveal(".services__card", { interval: 100 });
+sr.reveal(".discount__data", { origin: "left" });
+sr.reveal(".discount__images", { origin: "right" });
